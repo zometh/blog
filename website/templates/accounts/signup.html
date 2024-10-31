@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'blog/base.html' %}
+{% block title %} Inscription {% endblock %}
+
+{% block content %}
+
+    <h1>Inscription</h1>
+    
+        <form class="form" method="POST">
+            {% csrf_token %} 
+            <table>
+            <div class="form-group">
+                {{ form.as_table }}
+            </div>
+        
+    </table>  
+      <input type="submit" value="S'inscrire">
+    </form>
+    
+{% endblock %}

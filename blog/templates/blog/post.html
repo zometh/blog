@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "blog/base.html"%}
+{% block title %}post.title{% endblock title %}
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <h2>It is the {% now "jS \o\f F" %}</h2>
+    <p>{{ post.content }}</p>
+    <a href="{% url 'blog:blog' %}">Retour au blog</a>
+
+{% endblock content %}
